@@ -1,22 +1,48 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact | The Hot Seat by N</title><meta name="description" content="Book an appointment at The Hot Seat by N.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"></head><body><div id="site-header"></div><main>
-<div class="pagehead"><div class="wrap"><h1>Book or get in touch</h1><p class="lead">Fill in the form and you'll get a confirmation email straight away.</p></div></div>
-<section><div class="wrap two"><div><h2>Find us</h2>
-<p style="margin-top:1rem"><b>Branches</b><br>Mall of the South<br>East Gate</p>
-<p style="margin-top:1rem"><b>Phone</b><br><a href="tel:+27639726432">063 972 6432</a></p>
-<p style="margin-top:1rem"><b>Email</b><br><a href="mailto:noluthandomalindi.tpy@gmail.com">noluthandomalindi.tpy@gmail.com</a></p>
-<p style="margin-top:1.5rem"><a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/27639726432">Chat on WhatsApp</a></p></div>
-<form id="booking">
-<label>Full name<input name="name" required autocomplete="name"></label>
-<div class="row"><label>Email<input name="email" type="email" required autocomplete="email"></label>
-<label>Phone<input name="phone" type="tel" required autocomplete="tel"></label></div>
-<div class="row"><label>Branch<select name="branch"><option>Mall of the South</option><option>East Gate</option></select></label>
-<label>Service<select name="service" id="service"></select></label></div>
-<label>Preferred date<input name="date" type="date"></label>
-<label>Message<textarea name="message" rows="4" placeholder="Tell us about the look you want"></textarea></label>
-<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-<button class="btn" type="submit">Send booking request</button><div id="msg" role="status"></div></form></div></section>
-</main><div id="site-footer"></div><script src="js/data.js"></script><script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | The Hot Seat by N</title>
+    <meta
+      name="description"
+      content="Luxury salon gallery featuring nails, hair, make-up and lash transformations from The Hot Seat by N."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main>
+      <div class="page-head">
+        <div class="wrap">
+          <p class="eyebrow">Our portfolio</p>
+          <h1>Gallery</h1>
+          <p class="lead">Recent looks, luxe finishes and client transformations.</p>
+        </div>
+      </div>
+
+      <section>
+        <div class="wrap">
+          <div class="tabs" id="gal-tabs" role="group" aria-label="Filter gallery"></div>
+          <div class="gallery-grid" id="gallery"></div>
+        </div>
+      </section>
+
+      <dialog id="lightbox">
+        <img alt="Expanded beauty photo" />
+      </dialog>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
