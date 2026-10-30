@@ -1,100 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Appointment | The Hot Seat by N</title>
-    <meta
-      name="description"
-      content="Book an appointment with The Hot Seat by N. Contact us by phone, email or WhatsApp."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div id="site-header"></div>
-
-    <main>
-      <div class="page-head">
-        <div class="wrap">
-          <p class="eyebrow">Get in touch</p>
-          <h1>Book your look</h1>
-          <p class="lead">Send your request and receive a confirmation message right away.</p>
-        </div>
-      </div>
-
-      <section>
-        <div class="wrap contact-grid">
-          <div class="contact-info">
-            <h2>Visit us</h2>
-            <p><strong>Branches</strong><br />Mall of the South<br />East Gate</p>
-            <p><strong>Phone</strong><br /><a href="tel:+27639726432">063 972 6432</a></p>
-            <p>
-              <strong>Email</strong><br />
-              <a href="mailto:noluthandomalindi.tpy@gmail.com">noluthandomalindi.tpy@gmail.com</a>
-            </p>
-            <p class="contact-actions">
-              <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://wa.me/27639726432">Chat on WhatsApp</a>
-            </p>
-          </div>
-
-          <form id="booking" class="booking-form">
-            <label>
-              Full name
-              <input name="name" required autocomplete="name" />
-            </label>
-
-            <div class="form-row">
-              <label>
-                Email
-                <input name="email" type="email" required autocomplete="email" />
-              </label>
-              <label>
-                Phone
-                <input name="phone" type="tel" required autocomplete="tel" />
-              </label>
-            </div>
-
-            <div class="form-row">
-              <label>
-                Branch
-                <select name="branch">
-                  <option>Mall of the South</option>
-                  <option>East Gate</option>
-                </select>
-              </label>
-              <label>
-                Service
-                <select name="service" id="service"></select>
-              </label>
-            </div>
-
-            <label>
-              Preferred date
-              <input name="date" type="date" />
-            </label>
-
-            <label>
-              Message
-              <textarea name="message" rows="4" placeholder="Tell us about the look you want."></textarea>
-            </label>
-
-            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
-            <button class="btn" type="submit">Send booking request</button>
-            <div id="msg" role="status" aria-live="polite"></div>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <div id="site-footer"></div>
-
-    <script src="js/data.js"></script>
-    <script src="js/main.js"></script>
-  </body>
-</html>
+:root{--magenta:#B0125E;--magenta-d:#7E0B43;--pearl:#FBF1F4;--champ:#EFD3C7;--champ-d:#D9AE9C;--ink:#3A0F25;--muted:#7A5565;--w:1160px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 1.05rem/1.7 'Jost',system-ui,sans-serif;color:var(--ink);background:var(--pearl)}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+h1{font-size:clamp(2.8rem,8vw,5.6rem)}h2{font-size:clamp(2rem,4.5vw,3.2rem)}h3{font-size:1.6rem}
+a{color:inherit}img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:3px}
+.wrap{max-width:var(--w);margin:auto;padding:0 1.25rem}
+section{padding:clamp(3.5rem,8vw,6.5rem) 0}
+.lead{color:var(--muted);max-width:56ch;margin-top:1rem}
+.btn{display:inline-block;padding:.85rem 1.8rem;border-radius:999px;background:var(--magenta);color:#fff;text-decoration:none;font-weight:500;border:2px solid var(--magenta);cursor:pointer;font:inherit;transition:background .2s}
+.btn:hover{background:var(--magenta-d)}
+.btn.ghost{background:transparent;color:var(--magenta)}.btn.ghost:hover{background:var(--champ)}
+header{position:sticky;top:0;z-index:20;background:rgba(251,241,244,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--champ)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:600 1.6rem 'Cormorant Garamond',serif;text-decoration:none;color:var(--magenta)}
+.logo small{font:400 .8rem 'Jost';color:var(--muted);margin-left:.3rem}
+nav ul{display:flex;gap:1.8rem;list-style:none;padding:0}
+nav a{text-decoration:none;padding:.3rem 0;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current]{border-color:var(--magenta);color:var(--magenta)}
+.burger{display:none;background:none;border:0;font-size:1.8rem;color:var(--magenta);cursor:pointer}
+@media(max-width:780px){.burger{display:block}
+nav ul{display:none;position:absolute;left:0;right:0;top:68px;background:var(--pearl);flex-direction:column;padding:1rem 1.25rem 1.5rem;border-bottom:1px solid var(--champ);gap:.6rem}
+nav ul.open{display:flex}}
+.hero{background:radial-gradient(ellipse at 85% 20%,var(--champ) 0,transparent 55%),linear-gradient(180deg,#fff 0,var(--pearl) 100%);padding:clamp(4rem,10vw,8rem) 0 4rem}
+.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:center}
+.hero h1 em{color:var(--magenta)}
+.hero .cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.seat{aspect-ratio:3/4;border-radius:50% 50% 1.2rem 1.2rem/38% 38% 1.2rem 1.2rem;background:linear-gradient(160deg,var(--champ),var(--magenta));display:grid;place-items:end center;padding:2rem;color:#fff;font:italic 600 1.6rem 'Cormorant Garamond',serif;text-align:center;box-shadow:0 30px 60px -30px var(--magenta-d)}
+@media(max-width:780px){.hero .wrap{grid-template-columns:1fr}.seat{max-width:320px;aspect-ratio:4/3}}
+.stats{background:var(--magenta);color:#fff;padding:2.5rem 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;text-align:center}
+.stats b{display:block;font:600 3rem 'Cormorant Garamond',serif;color:var(--champ)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2.5rem}
+.cat{background:#fff;border:1px solid var(--champ);padding:2rem 1.6rem;border-radius:.4rem 2rem .4rem 2rem;text-decoration:none;transition:transform .2s,border-color .2s}
+.cat:hover{transform:translateY(-4px);border-color:var(--magenta)}
+.cat p{color:var(--muted);margin-top:.5rem}
+.band{background:var(--champ)}
+.pagehead{background:linear-gradient(120deg,var(--champ),var(--pearl));padding:4rem 0 3rem}
+.tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin:2rem 0}
+.tabs button{padding:.5rem 1.2rem;border-radius:999px;border:1px solid var(--champ-d);background:#fff;font:inherit;cursor:pointer;color:var(--ink)}
+.tabs button[aria-pressed=true]{background:var(--magenta);color:#fff;border-color:var(--magenta)}
+.svc-group{margin-bottom:3rem}
+.svc-group h3{color:var(--magenta);border-bottom:1px solid var(--champ-d);padding-bottom:.5rem;margin-bottom:.5rem}
+.svc{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px dashed var(--champ-d)}
+.svc span:last-child{font-weight:500;color:var(--magenta);white-space:nowrap}
+.gal{columns:3 240px;column-gap:1rem}
+.tile{break-inside:avoid;margin-bottom:1rem;border-radius:.5rem;overflow:hidden;cursor:zoom-in;position:relative;background:var(--champ);border:0;width:100%;padding:0;display:block}
+.tile img{width:100%}
+.tile .ph{display:grid;place-items:center;color:#fff;font:italic 600 1.4rem 'Cormorant Garamond',serif;padding:1rem;text-align:center}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:.6rem .9rem;background:linear-gradient(transparent,rgba(58,15,37,.8));color:#fff;font-size:.9rem;text-align:left}
+dialog{border:0;border-radius:.6rem;padding:0;max-width:92vw;background:#fff}
+dialog::backdrop{background:rgba(58,15,37,.8)}
+dialog img{max-height:85vh}
+.two{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+form{background:#fff;padding:2rem;border:1px solid var(--champ);border-radius:.4rem 2rem .4rem 2rem;display:grid;gap:1rem}
+label{display:grid;gap:.3rem;font-weight:500;font-size:.95rem}
+input,select,textarea{font:inherit;padding:.75rem .9rem;border:1px solid var(--champ-d);border-radius:.4rem;background:var(--pearl);color:var(--ink);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+.msg{padding:1rem;border-radius:.4rem;display:none}.msg.ok{display:block;background:#E8F6EC;color:#14532d}.msg.err{display:block;background:#FDE8E8;color:#7f1d1d}
+.hp{position:absolute;left:-9999px}
+footer{background:var(--ink);color:var(--champ);padding:3rem 0 2rem;font-size:.95rem}
+footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
+footer h3{color:#fff;font-size:1.4rem;margin-bottom:.5rem}footer a{text-decoration:none}footer a:hover{color:#fff}
+.copy{text-align:center;margin-top:2rem;opacity:.7;font-size:.85rem}
+.wa{position:fixed;right:1.1rem;bottom:1.1rem;z-index:30;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.wa svg{width:30px;height:30px;fill:#fff}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
